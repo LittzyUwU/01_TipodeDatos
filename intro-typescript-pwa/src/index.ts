@@ -1,14 +1,23 @@
-//Formula General
+//Practica 3: operación de multiplicar a * b, usando sumas =15
 
-    let a:number= parseInt(prompt("Introduce el valor de a:"));
-    let b:number= parseInt(prompt("Introduce el valor de b:"));
-    let c:number= parseInt(prompt("Introduce el valor de b:"));
-    let x1:number;
-    let x2:number;
+class operacion{
+    private numero:number;
+    a:number=3;
 
-//parseInt(prompt("Introduce el valor de a:"));
-//parseInt(prompt("Introduce el valor de a:"));
+    setNumero(a:number){
+        this.numero=a;
+       
+    }
+    getNumero():number{
+        return this.numero;
+    }
+    calcular():void{
+        for(let i=1; i<11; ++i){
+            console.log(`${this.numero} + ${this.numero} + ${this.numero} + ${this.numero} + ${this.numero} = ${i*this.numero}`);
+        }
+    }
+}
 
-x1 = ((-1*b)+Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
-x2 = ((-1*b)+Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
-
+let operacion1= new operacion();
+operacion1.setNumero(3);
+console.log('Resultado' + operacion1.calcular());
