@@ -19,10 +19,30 @@ function restar(num1:number,num2:number,num3?:number):number{
         return num1 - num2;
     }
 }
-function sumarFlecha(a:number,b:number):number{
+const sumaFlecha=(a:number,b:number):number=>{
     return a + b;
-
 }
 
-console.log(restar(10,5));
-console.log(restar(10,5,2));
+//console.log(restar(10,5));
+//console.log(restar(10,5,2));
+
+interface escuelaAlumno{
+    nombre:string;
+    email?:string;
+    edad:number;
+    saludar:()=>void;
+}
+
+function alumnoUTL(alumno:escuelaAlumno, calificar:number):void{
+    alumno.nombre='Mario',
+    alumno.email='mario@gmail.com'
+    alumno.edad=calificar;
+}
+
+const nuevoAlumno:escuelaAlumno={
+    nombre:'Dario',
+    edad: 23,
+    saludar(){
+        console.log('Hola mundo')
+    },
+}
